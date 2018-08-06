@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body onkeyup="buttonUnicode(event)" onmousedown="isKeyPressed_andwhichElement(event)">
+    <a id="myAnchor" href="http://www.microsoft.com">访问Microsoft</a>
+    <input type="button" onclick="changeLink()" value="改变链接">
+    <input type="button" onclick="getfocus()" value="获得焦点">
+    <input type="button" onclick="losefocus()" value="失去焦点">
+    <br>
+    <p><a id="w3" href="http://www.w3school.com.cn/">W3School.com.cn</a> （请使用 Alt + w 给该链接赋予焦点）</p>
+    <p><a id="w3dom" href="http://www.w3school.com.cn/htmldom/">HTML DOM</a> （请使用 Alt + d 为该链接赋予焦点）</p>
+    <input name="myInput" type="text" size="20" /><br />
+    <input name="myInput" type="text" size="20" /><br />
+    <input name="myInput" type="text" size="20" /><br />
+    <br />
+    <input type="button" onclick="getElements()" value="名为 'myInput' 的元素有多少个？" />
+    <input type="button" value="打开并写入一个新文档" onclick="createNewDoc()">
+    <a name="first">第一个锚</a><br />
+    <a name="second">第二个锚</a><br />
+    <a name="third">第三个锚</a><br />
+    <br />
+    <br>
+    <form id="Form1" name="Form1">
+        您的姓名：<input type="text">
+        </form>
+        <form id="Form2" name="Form2">
+        您的汽车：<input type="text">
+        </form>
+    <form name="Form3"></form>
+    <img src="#" alt="">
+    <img src="#" alt="">
+    <p onmousedown="whitchButton(event)">请在此行中点击鼠标。控制台会提示出您点击了哪个鼠标按键。</p>
+    <h1 onmousedown="show_coords(event)">请在本行中点击。控制台会提示出鼠标指针的 x 和 y 坐标。</h1>
+    <h2>
+        <b>注释：</b>在测试这个例子时，要确保页面的框架获得了焦点。</p>
+        <p>在键盘上按一个键。控制台会提示出该按键的 unicode。</p>
+    </h2>
+    <p onmousedown="coordinates(event)">在本行中点击某个位置。控制台会提示出指针相对于屏幕的 x 和 y 坐标。</p>
+    <p>在文档中点击某个位置。控制台会告诉你是否按下了 shift 键。</p>
+    <script src="dom.js"></script>
+</body>
+</html>
