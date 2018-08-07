@@ -151,3 +151,11 @@
 - 函数抽象化，变得更通用
 
 ## 第10章 用JavaScript实现动画效果
+
+- position属性合法值
+  - static：默认值，按照它们在标记里出现顺序排列
+  - fixed
+  - relative：与static相似，但可以从文档的正常显示顺序中脱离出来（应用float属性）
+  - absolute：可以把它摆放到容纳它的“容器”的任何位置。这个容器要么时文档本身，要么是一个有着fixed或absolute属性的父元素（显示位置由top、right、bottom、left等属性决定）
+  
+## 第11章 HTML5
