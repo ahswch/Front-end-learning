@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if,v-show,v-for 指令</title>
+    <script src="../../vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- DOM存在与否 v-if 为true时，div存在,false时 div节点去除  删除节点 DOM中移除-->
+        <div v-if="show">hello world</div>
+        <button @click="handleClick">toggle</button>
+        <!-- DOM显示与否 v-show 为true时，div显示,false时 div节点不显示 display设为none 隐藏   使用频率大时用show，不更改DOM，性能好-->
+        <div v-show="show">hello show</div>
+        <!-- 循环显示DOM v-for -->
+        <ul>
+            <li v-for="item of list" :key="item">{{item}}</li>
+            <!-- key属性提高每一项渲染的效率，key值每一项不能相同，如果数组为[1,1,2] 就不行了 可以用下面这个 -->
+        </ul>
+        <ul>
+            <li v-for="(item,index) of list" :key="index">{{item}}</li>
+            <!-- 每项值放入item，索引放入index  利用索引值作key值，在不对数组排序等操作时没问题，如进行进阶操作，最好不使用，基础课程暂不解释-->
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: "#root",
+            data: {
+                show: true,
+                list: [1,2,3]
+            },
+            methods: {
+                handleClick: function(){
+                    this.show = !this.show
+                }
+            }
+        })
+    </script>
+</body>
+</html>

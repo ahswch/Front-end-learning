@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue入门</title>
+    <script src="../../vue.js"></script>
+</head>
+<body>
+    <!-- 挂载点(与vue绑定的节点)、模板（节点下的内容）、实例（template）之间的关系 -->
+    <div id="root"></div>
+    <script>
+        new Vue({
+            el: "#root",
+            template: '<h1>hello {{msg}}</h1>',
+            data: {
+                msg: "world"
+            }
+        })
+    </script>
+</body>
+</html>
