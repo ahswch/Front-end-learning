@@ -161,3 +161,40 @@
 ## 第11章 HTML5
 
 - HTML简介，不作总结
+
+## 第12章 综合实例
+
+- 由于ajax的跨域问题，不作ajax部分，提交完整表单后直接进入感谢界面
+- 在 https://closure-compiler.appspot.com/home 上对js代码进行压缩
+- 保证任何人都能无障碍地使用它，是一个最基本的原则
+
+做一个完整网站时，多个页面的基本框架不变，使用同一js作行为层时，要合理利用判断语句，让js中不同函数能适应不同页面，如：控制图片展示页的函数在表格页不会报错，
+
+```javascript
+function prepareGallery(){
+    if(!document.getElementsByTagName) {
+        return false;
+    }
+    if(!document.getElementById){
+        return false;
+    }
+    if(!document.getElementById("imagegallery")){
+        return false;
+    }
+    var gallery = document.getElementById("imagegallery");
+    var links = gallery.getElementsByTagName("a");
+    for (var i=0;i<links.length;i++){
+        links[i].onclick = function(){
+            // showPic(this);
+            return !showPic(this);
+        }
+    }
+}
+```
+这个函数的第3个if语句，就能够使函数在除图片展示页外的其它页面不会报错,保证了相对的平稳退化
+
+- 使用有意义的标记来构建页面结构
+- 把表现性的信息分离到CSS样式表中
+- 使用合理JavaScript来应用行为增强,同时确保平稳退化
+
+至此，本书一周目基本完成，ajax部分由于跨域问题暂跳过。
