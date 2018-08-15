@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font: 400 1em/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #2b3f55;
+  background-color: #f7f7f7;
+  font-size: .9em;
+}
+nav{
+  position: fixed;
+	width: 100%;
+}
+.about {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.profile h1 {
+  position: relative;
+}
+
+.profile p {
+  line-height: 2.2em;
+  font-size: 15px;
+  position: relative;
+}
+
+.profile span {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.profile a i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+.profile .blog {
+  font-size: 30px;
+  color: #ea4c89;
+  position: relative;
+}
+.profile .github {
+  font-size: 30px;
+  color: #24292e;
+  position: relative;
+}
+
+.profile .email {
+  font-size: 30px;
+  color: #4fcf8f;
+  position: relative;
+}
+
+.blog:hover, .github:hover, .email:hover {
+  color: #545454;
+}
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+a {
+  color: #2b3f55;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ea4c89;
+  text-decoration: none;
+}
+.expr{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px 20px;
+  background-color: #f7f7f7;
+}
+.edu,.abil,.code{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+}
+.edu p,.abil p,.code p{
+  line-height: 2em;
+}
+.edu{
+  width: 40%;
+}
+.abil{
+  width: 40%;
+}
+.code{
+  width: 18%;
+}
+.abil span {
+  position:relative;
+}
+#html:after{
+  content:'★★★★★';
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:3.5em;
+  overflow: hidden;
+}
+#css:after{
+  content:'★★★★★';
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:2.5em;
+  overflow: hidden;
+}
+#js:after{
+  content:'★★★★★';
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:2.5em;
+  overflow: hidden;
+}
+#vue:after{
+  content:'★★★★★';
+  position:absolute;
+  top:-5px;
+  left:0;
+  width:0.5em;
+  overflow: hidden;
+}
+.port{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px 20px;
+  background-color: #f7f7f7;
+}
+.work {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  background-color: #fff;
+  margin: 15px 15px;
+  padding: 15px 15px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+.work:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+.work h3 {
+  margin: 10px;
+}
+.work p {
+  font-weight: 200;
+  margin: 10px;
+}
+.work .tags {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.tags span {
+  margin-right: 10px;
+}
+
+.work .javascript {
+  color: #F3C969;
+}
+
+.work .html {
+  color: #FF7700;
+}
+
+.work .vue {
+  color: #2CA58D;
+}
+
+.work .css {
+  color: #067BC2;
+}
+
+.work .jquery {
+  color: #4FCF8F;
+}
+.work img {
+  max-width: 100%;
+}
+
+.work h2 {
+  margin-bottom: 40px;
+}
+.contact{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px 20px;
+  background-color: #f7f7f9;
+}
+.contact h3{
+  text-align: center;
+}
+.byEmail, .bySocial{
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 15px;
+  margin: 15px 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  width: 45%;
+}
+.bySocial i{
+  font-size: 34px;
+  padding: 20px 20px;
+  margin: 10px auto;
+}
+.weibo{
+  color: #e32428;
+  cursor: pointer;
+}
+.twitter{
+  color: #1da1f3;
+  cursor: pointer;
+}
+.steam{
+  color: #171a21;
+  cursor: pointer;
+}
+.weibo:hover, .twitter:hover, .steam:hover{
+  color: #545454;
+}
+footer {
+  text-align: center;
+  font-size: .9em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #aaabab;
+}
+footer i{
+  color: blueviolet;
+}
