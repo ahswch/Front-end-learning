@@ -5,7 +5,9 @@
 下载本项目代码后依次运行：
 
 ```
-npm install
-npm run dev
+npm install 
+npm run dev // 在本地 http://localhost:8000 预览
+npm run build // 生成网页文件夹dist
 ```
-在本地 http://localhost:8000 预览
+
+
