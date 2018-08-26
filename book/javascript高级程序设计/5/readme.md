@@ -710,3 +710,5 @@ ECMAScript 正则表达式不支持的特性:
 - 不建议直接实例化 Number 类型
 
 #### String类型
+
+- 
