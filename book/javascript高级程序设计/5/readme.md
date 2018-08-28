@@ -669,7 +669,7 @@ ECMAScript 正则表达式不支持的特性:
 
 - 每个函数继承的 toLocaleString()和 toString()方法始终都返回函数的代码，另外一个继承的valueOf()方法同样也只返回函数代码
 
-### 基本包装类型
+## 基本包装类型
 
 为了便于操作基本类型值，ECMAScript 还提供了 3 个特殊的引用类型：Boolean、Number 和String
 
@@ -679,7 +679,7 @@ ECMAScript 正则表达式不支持的特性:
   - 自动创建的基本包装类型的对象，则只存在于一行代码的执行瞬间，然后立即被销毁。不能在运行时为基本类型值添加属性和方法
 - Object 构造函数会根据传入值的类型返回相应基本包装类型的实例
 
-#### Boolean类型(与布尔值对应的引用类型)
+### Boolean类型(与布尔值对应的引用类型)
 
 - 要创建 Boolean 对象：
 
@@ -693,7 +693,7 @@ ECMAScript 正则表达式不支持的特性:
   - 由于Boolean对象是Boolean类型的实例，所以使用instanceof操作符测试 Boolean 对象会返回 true，而测试基本类型的布尔值则返回 false
 - 建议是永远不要使用 Boolean 对象
 
-#### Number类型(与数字值对应的引用类型)
+### Number类型(与数字值对应的引用类型)
 
 - 创建 Number 对象
 
@@ -709,4 +709,311 @@ ECMAScript 正则表达式不支持的特性:
 - toPrecision()方法可能会返回固定大小（fixed）格式，也可能返回指数（exponential）格式；具体规则是看哪种格式最合适。接收一个参数，即表示数值的所有数字的位数（不包括指数部分）(四舍五入)
 - 不建议直接实例化 Number 类型
 
-#### String类型
+### String类型(字符串的对象包装类型)
+
+- 使用 String 构造函数来创建:
+
+ ```javascript
+ var stringObject = new String("hello world");
+ ```
+
+- 继承的 valueOf()、toLocaleString()和 toString()方法，都返回对象所表示的基本字符串值
+- String 类型的每个实例都有一个 length 属性，表示字符串中包含多个字符
+
+#### String 类型提供了很多方法，用于辅助完成对ECMAScript中字符串的解析和操作
+
+- 字符方法(charAt()和 charCodeAt())
+  - 用于访问字符串中特定字符
+  - 接收一个参数，即基于 0 的字符位置
+  - charAt()方法以单字符字符串的形式返回给定位置的那个字符
+  - charCodeAt()方法返回给定位置的那个字符的字符编码
+  > 另一个访问个别字符的方法-使用方括号加数字索引来访问字符串中的特定字符(像数组访问 maybe)
+- 字符串操作方法
+  - concat()——将一或多个字符串拼接起来
+    - 可以接受任意多个参数（用,隔开）
+    - 返回拼接得到的新字符串
+    - 不改变原有字符串
+
+  三个基于子字符串创建新字符串的方法：
+  > 都会返回被操作字符串的一个子字符串，都接受一或两个参数.第一个参数指定子字符串的开始位置，第二个参数（在指定的情况下）表示子字符串到哪里结束,没有给这些方法传递第二个参数，则将字符串的长度作为结束位置.
+
+  > 不会修改字符串本身的值
+  - slice()
+    - 第二个参数指定的是子字符串最后一个字符后面的位置
+    - 将传入的负值与字符串的长度相加
+  - substr()
+    - 第二个参数指定的则是返回的字符个数
+    - 将负的第一个参数加上字符串的长度，而将负的第二个参数转换为 0
+  - substring()
+    - 第二个参数指定的是子字符串最后一个字符后面的位置
+    - 把所有负值参数都转换为 0
+    - 将较小的数作为开始位置
+- 字符串位置方法
+  > 两个可以从字符串中查找子字符串的方法：indexOf()和 lastIndexOf(),都是从一个字符串中搜索给定的子字符串，然后返子字符串的位置（没找到该子字符串，返回-1）。接收可选的第二个参数，表示从字符串中的哪个位置开始搜索
+  - indexOf()——从字符串的开头向后搜索子字符串
+  - lastIndexOf()——从字符串的末尾向前搜索子字符串
+  - 可以通过循环调用 indexOf()或 lastIndexOf()来找到所有匹配的子字符串
+- trim()方法
+  > ECMAScript 5为所有字符串定义了 trim()方法
+  - 创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果
+  - 原始字符串中的前置及后缀空格会保持不变
+  > Firefox 3.5+、Safari 5+ 和 Chrome 8+还支持非标准的 trimLeft()和 trimRight()方法，分别用于删除字符串开头和末尾的空格。
+- 字符串大小写转换方法
+  - toLowerCase()
+  - toUpperCase()
+  - toLocaleLowerCase()
+  - toLocaleUpperCase()
+  > 后两种方法是针对特定地区的实现，对有些地区来说，针对地区的方法与其通用方法得到的结果相同，但少数语言（如土耳其语）会为 Unicode大小写转换应用特殊的规则，这就必须使用针对地区的方法来保证实现正确的转换
+
+  > 在不知道自己的代码将在哪种语言环境中运行的情况下,使用针对地区的方法
+- 字符串的模式匹配方法
+  - match()方法:本质上与调用 RegExp 的 exec()方法相同
+    - 只接受一个参数，正则表达式或 RegExp 对象
+  - search()方法
+    - 只接受一个参数，正则表达式或 RegExp 对象（由字符串或 RegExp 对象指定的一个正则表达式）
+    - 回字符串中第一个匹配项的索引；如果没有找到匹配项，则返回-1
+    - 始终是从字符串开头向后查找模式
+  - replace()方法
+    - 接受两个参数：第一个参数可以是一个 RegExp 对象或者一个字符串（这个字符串不会被转换成正则表达式），第二个参数可以是一个字符串或者一个函数
+    - 如果第一个参数是字符串，那么只会替换第一个子字符串。要想替换所有子字符串，办法是提供一个正则表达式，且要指定全局（g）标志
+    - 如果第二个参数是字符串，可以使用一些特殊的字符序列，将正则表达式操作得到的值插入到结果字符串中，下表列出了 ECMAScript提供的这些特殊的字符序列：
+
+    |字符序列| <center>替换文本</center> |
+    |:--:|:--|
+    |$$|$|
+    |$&|匹配整个模式的子字符串。与RegExp.lastMatch的值相同|
+    |$'|匹配的子字符串之前的子字符串。与RegExp.leftContext的值相同|
+    |$`|匹配的子字符串之后的子字符串。与RegExp.rightContext的值相同|
+    |$n|匹配第n个捕获组的子字符串，其中n等于0～9。例如，$1是匹配第一个捕获组的子字符串，$2是匹配第二个捕获组的子字符串，以此类推。如果正则表达式中没有定义捕获组，则使用空字符串|
+    |$nn|匹配第nn个捕获组的子字符串，其中nn等于01～99。例如，$01是匹配第一个捕获组的子字符串，$02 是匹配第二个捕获组的子字符串，以此类推。如果正则表达式中没有定义捕获组，则使用空字符串|
+
+    例子：
+
+     ```javascript
+     var text = "cat, bat, sat, fat";
+     result = text.replace(/(.at)/g, "word ($1)");
+     alert(result); //word (cat), word (bat), word (sat), word (fat)
+     ```
+
+    - 第二个参数是一个函数
+    > 在只有一个匹配项（即与模式匹配的字符串）的情况下，会向这个函数传递 3个参数：模式的匹配项、模式匹配项在字符串中的位置和原始字符串。在正则表达式中定义了多个捕获组的情况下，传递给函数的参数依次是模式的匹配项、第一个捕获组的匹配项、第二个捕获组的匹配项……，但最后两个参数仍然分别是模式的匹配项在字符串中的位置和原始字符串。这个函数应该返回一个字符串，表示应该被替换的匹配项。使用函数作为 replace()方法的第二个参数可以实现更加精细的替换操作,例子：
+
+     ```javascript
+     function htmlEscape(text){
+       return text.replace(/[<>"&]/g, function(match, pos, originalText){
+         switch(match){
+           case "<":
+            return "&lt;";
+          case ">":
+            return "&gt;";
+          case "&":
+            return "&amp;";
+          case "\"":
+            return "&quot;";
+         }
+       });
+     }
+
+     alert(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
+     //&lt;p class=&quot;greeting&quot;&gt;Hello world!&lt;/p&gt;
+     ```
+
+  - split()
+    - 基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中
+    - 分隔符可以是字符串，也可以是一个 RegExp 对象（这个方法不会将字符串看成正则表达式）
+    - 接受可选的第二个参数，用于指定数组的大小,确保返回的数组不会超过既定大小
+    - 在使用这种正则表达式时，一定要在各种浏览器下多测试
+    例子：
+
+     ```javascript
+     var colorText = "red,blue,green,yellow";
+     var colors1 = colorText.split(",");  //["red", "blue", "green", "yellow"]
+     var colors2 = colorText.split(",", 2); //["red", "blue"]
+     var colors3 = colorText.split(/[^\,]+/); //["", ",", ",", ",", ""]  不明
+     ```
+
+- localeCompare()方法
+  比较两个字符串，并返回下列值中的一个:
+  - 如果字符串在字母表中应该排在字符串参数之前，则返回一个负数（大多数情况下是-1，具体的值要视实现而定）
+  - 如果字符串等于字符串参数，则返回 0；
+  - 如果字符串在字母表中应该排在字符串参数之后，则返回一个正数（大多数情况下是 1，具体的值同样要视实现而定）。
+
+   ```javascript
+   var stringValue = "yellow";
+   alert(stringValue.localeCompare("brick")); //1
+   ```
+
+  - 实现所支持的地区（国家和语言）决定了这个方法的行为,如美国区分大小写
+- fromCharCode()方法
+  - 接收一或多个字符编码，然后将它们转换成一个字符串
+  - 本质上，这个方法与实例方法 charCodeAt()执行的是相反的操作
+
+   ```javascript
+   alert(String.fromCharCode(104, 101, 108, 108, 111)); //"hello"
+   ```
+
+- HTML方法
+  简化常见 HTML格式化任务的方法:
+  > 应该尽量不使用这些方法，因为它们创建的标记通常无法表达语义
+
+  |<center>方法</center>|<center>输出结果</center>|
+  |:--|:--|
+  |anchor(name)|&lt;a name= "name">string&lt;/a>|
+  |big()|&lt;big&gt;string&lt;/big&gt;|
+  |bold()|&lt;b&gt;string&lt;/b&gt;|
+  |fixed()|&lt;tt&gt;string&lt;/tt&gt;|
+  |fontcolor(color)|&lt;font color="color"&gt;string&lt;/font&gt;|
+  |fontsize(size)|&lt;font size="size"&gt;string&lt;/font&gt;|
+  |italics()|&lt;i>string&lt;/i>|
+  |link(url)|&lt;a href="url"&gt;string&lt;/a&gt;|
+  |small()|&lt;small&gt;string&lt;/small&gt;|
+  |strike()|&lt;strike&gt;string&lt;/strike&gt;|
+  |sub()|&lt;sub&gt;string&lt;/sub&gt;|
+  |sup()|&lt;sup&gt;string&lt;/sup&gt;|
+
+## 单体内置对象
+
+> ECMA-262对内置对象的定义是：“由ECMAScript实现提供的、不依赖于宿主环境的对象，这些对象在 ECMAScript程序执行之前就已经存在了。”意思就是说，开发人员不必显式地实例化内置对象，因为它们已经实例化了
+
+内置对象：Object、Array 和 String（前面讲过）、Global 和 Math
+
+### Global对象
+
+- 没有全局变量或全局函数（不属于任何其他对象的属性和方法，最终都是它的属性和方法）
+- 所有在全局作用域中定义的属性和函数，都是 Global 对象的属性
+
+#### URI编码方法
+
+- Global 对象的 encodeURI()和 encodeURIComponent()方法
+  - 可以对 URI（Uniform ResourceIdentifiers，通用资源标识符）进行编码，以便发送给浏览器
+  - encodeURI()
+    - 主要用于整个 URI（例如，http://www.wrox.com/illegal value.htm）
+    - 不会对本身属于 URI 的特殊字符进行编码，例如冒号、正斜杠、问号和井字号
+    - 编码后的结果是除了空格之外的其他字符都原封不动，只有空格被替换成了%20
+  - encodeURIComponent()
+    - 主要用于对 URI中的某一段（例如前面 URI中的 illegal value.htm）进行编码
+    - 会对它发现的任何非标准字符进行编码
+    - 会使用对应的编码替换所有非字母数字字符
+    > 这也正是可以对整个URI使用encodeURI()，而只能对附加在现有URI后面的字符串使用encodeURIComponent()的原因所在
+
+    与 encodeURI()和 encodeURIComponent()方法对应的两个方法分别是 decodeURI()和decodeURIComponent()  对应解码
+
+#### eval()方法
+
+- 只接受一个参数，即要执行的ECMAScript（或 JavaScript）字符串，例子：
+
+ ```javascript
+ eval("alert('hi')");
+ // 这行代码的作用等价于下面这行代码：
+ alert("hi");
+ ```
+
+> 当解析器发现代码中调用 eval()方法时，它会将传入的参数当作实际的 ECMAScript语句来解析，然后把执行结果插入到原位置。通过 eval()执行的代码被认为是包含该次调用的执行环境的一部分，因此被执行的代码具有与该执行环境相同的作用域链。这意味着通过 eval()执行的代码可以引用在包含环境中定义的变量
+
+#### Global 对象的属性
+
+> ECMAScript 5明确禁止给 undefined、NaN 和 Infinity 赋值，这样做即使在非严格模式下也会导致错误
+
+|<center>属性</center>|<center>说明</center>|<center>属性</center>|<center>说明</center>|
+|:--|:--|:--|:--|
+|undefined|特殊值undefined|Date|构造函数Date|
+|NaN|特殊值NaN|RegExp|构造函数RegExp|
+|Infinity|特殊值Infinity|Error|构造函数Error|
+|Object|构造函数Object|EvalError|构造函数EvalError|
+|Array|构造函数Array|RangeError|构造函数RangeError|
+|Function|构造函数Function|ReferenceError|构造函数ReferenceError|
+|Boolean|构造函数Boolean|SyntaxError|构造函数SyntaxError|
+|String|构造函数String|TypeError|构造函数TypeError|
+|Number|构造函数Number|URIError|构造函数URIError|
+
+#### window 对象
+
+> ECMAScript 虽然没有指出如何直接访问 Global 对象，但 Web 浏览器都是将这个全局对象作为window 对象的一部分加以实现的。因此，在全局作用域中声明的所有变量和函数，就都成为了 window对象的属性
+另一种取得 Global 对象的方法是使用以下代码:
+
+ ```javascript
+ var global = function(){
+   return this;
+ }();
+ ```
+
+### Math对象
+
+> 为保存数学公式和信息提供了一个公共位置
+
+#### Math 对象的属性
+
+|<center>属性</center>|<center>说明</center>|
+|:--|:--|
+|Math.E|自然对数的底数，即常量e的值|
+|Math.LN10|10的自然对数|
+|Math.LN2|2的自然对数|
+|Math.LOG2E|以2为底e的对数|
+|Math.LOG10E|以10为底e的对数|
+|Math.PI|π的值|
+|Math.SQRT1_2|1/2的平方根（即2的平方根的倒数）|
+|Math.SQRT2|2的平方根|
+
+#### min()和 max()方法
+
+- 用于确定一组数值中的最小值和最大值
+- 接收任意多个数值参数 例：
+
+ ```javascript
+ var max = Math.max(3, 54, 32, 16);
+ alert(max); //54
+ ```
+
+- 经常用于避免多余的循环和在 if 语句中确定一组数的最大值
+- 要找到数组中的最大或最小值，可以像下面这样使用 apply()方法:
+
+ ```javascript
+ var values = [1, 2, 3, 4, 5, 6, 7, 8];
+ var max = Math.max.apply(Math, values);
+ ```
+
+#### 舍入方法
+
+- Math.ceil()执行向上舍入，即它总是将数值向上舍入为最接近的整数；
+- Math.floor()执行向下舍入，即它总是将数值向下舍入为最接近的整数；
+- Math.round()执行标准舍入，即它总是将数值四舍五入为最接近的整数（这也是我们在数学课 上学到的舍入规则）。
+
+#### random()方法
+
+- 返回大于等于 0小于 1的一个随机数.
+- 套用下面的公式,利用 Math.random()从某个整数范围内随机选择一个值:
+
+ ```
+ 值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能的值)
+ ```
+
+#### 其他方法
+
+|<center>方法</center>|<center>说明</center>|<center>方法</center>|<center>说明</center>|
+|:--|:--|:--|:--|
+|Math.abs(num)|返回num 的绝对值|Math.asin(x)|返回x 的反正弦值|
+|Math.exp(num)|返回Math.E 的num 次幂|Math.atan(x)|返回x 的反正切值|
+|Math.log(num)|返回num 的自然对数|Math.atan2(y,x)|返回y/x 的反正切值|
+|Math.pow(num,power)|返回num 的power 次幂|Math.cos(x)|返回x 的余弦值|
+|Math.sqrt(num)|返回num 的平方根|Math.sin(x)|返回x 的正弦值|
+|Math.acos(x)|返回x 的反余弦值|Math.tan(x)|返回x 的正切值|
+
+## 小结
+
+对象在 JavaScript 中被称为引用类型的值，而且有一些内置的引用类型可以用来创建特定的对象，简要总结:
+
+- 引用类型与传统面向对象程序设计中的类相似，但实现不同；
+- Object 是一个基础类型，其他所有类型都从 Object 继承了基本的行为；
+- Array 类型是一组值的有序列表，同时还提供了操作和转换这些值的功能；
+- Date 类型提供了有关日期和时间的信息，包括当前日期和时间以及相关的计算功能；
+- RegExp 类型是 ECMAScript支持正则表达式的一个接口，提供了最基本的和一些高级的正则表达式功能。
+
+  > 函数实际上是 Function 类型的实例，因此函数也是对象；由于函数是对象，所以函数也拥有方法，可以用来增强其行为。
+
+  有了基本包装类型，所以 JavaScript 中的基本类型值可以被当作对象来访问。三种基本包装类型分别是：Boolean、Number 和 String。它们共同的特征：
+
+  - 每个包装类型都映射到同名的基本类型；
+  - 在读取模式下访问基本类型值时，就会创建对应的基本包装类型的一个对象，从而方便了数据操作；
+  - 操作基本类型值的语句一经执行完毕，就会立即销毁新创建的包装对象。
+
+- 在所有代码执行之前，作用域中就已经存在两个内置对象：Global 和 Math。在大多数 ECMAScript实现中都不能直接访问 Global 对象。不过，Web 浏览器实现了承担该角色的 window 对象。全局变量和函数都是 Global 对象的属性。Math 对象提供了很多属性和方法，用于辅助完成复杂的数学计算任务。
