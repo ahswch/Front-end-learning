@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>在Vue中使用插槽</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="root">
+    <!-- <child content='<p>Dell</p>'></child> -->
+    <body-content>
+      <div class="header" slot='header'>header</div>
+      <div class="footer" slot='footer'>footer</div>
+    </body-content>
+  </div>
+
+  <script>
+    // 直接在template里使用差值表达式，p标签会被转义显示出来 在外包裹一个div用v-html
+    Vue.component('body-content', {
+      // props: ['content'],
+      // template: `<div>
+      //             <p>hello</p>
+      //             <div v-html='this.content'></div>
+      //           </div>`
+      template: `<div>
+                  <slot name='header'></slot>
+                  <div class='content'>content</div>
+                  <slot name='footer'></slot>
+                </div>`
+    })
+
+    var vm = new Vue({
+      el: '#root'
+    })
+  </script>
+</body>
+</html>
