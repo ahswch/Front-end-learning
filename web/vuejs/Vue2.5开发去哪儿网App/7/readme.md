@@ -66,3 +66,66 @@
 > git上传后 切换到master分支 git merge origin/name
 
 ## 图标区域页面布局
+
+- home>components下新建Icons组件，并在home组件引入
+- style设置（div标签 宽度不设置，如果是非div，宽度100%）
+
+## 图标区域逻辑实现
+
+- 超过8个可拖动
+- 描述字数...
+  - 在styles下新建mixins.styl 输入以下代码，在css使用实现字数超过宽度变成...
+
+  ```stylus
+  ellipsis()
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  ```
+
+## 推荐组件开发
+
+- 新建Recommend组件
+- 在使用ellipsis()时无效 需要在使用的父组件中写入`min-width: 0`的css样式
+
+## 周末游组件开发
+
+- 创建Weekend组件
+- 部分代码注视
+  - 依据图片宽高比做适应样式
+
+  ```css
+  .item-img-wrapper
+      overflow: hidden
+      height: 0
+      padding-bottom: 33.9%
+  ```
+
+## Ajax获取首页数据
+
+- Vue中发送Ajax的方式
+  - 浏览器自带的fetch
+  - vue-resource
+  - 第三方axios(跨平台)
+- 本项目使用axios
+  - `npm i axios --save`
+  - 在Home.vue中发送请求
+    - 使用生命周期函数mounted
+    - 在static下建mock》index.json 作数据源 只有在static下的能在线上访问到
+    - 在index.js中设置代理(webpack dev serve 提供) 在本地调试时自动把api路径指向static/mock
+
+## 首页父子组件数据传递
+
+- 父通过属性传
+- icon取消自动滚动
+  - icon中配置swiper属性并
+
+  ```javascript
+  data () {
+    return {
+      swiperOption: {
+        autoplay: false
+      }
+    }
+  },
+  ```
