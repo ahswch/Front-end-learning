@@ -78,3 +78,15 @@
 - vue-x
 - vue服务器端渲染
 - 可以使用vue[相关资源](https://github.com/vuejs/awesome-vue)
+
+> 在服务器端运行：config index.js中设置`assetsPublicPath: '/',`
+> 要想直接打开打包好的html,config index.js中设置`assetsPublicPath: './',`
+> 注意要把json数据放在api文件夹置根目录
+> 暂未成功
+> `https://blog.csdn.net/a120120yyyy/article/details/78048838`
+> `https://blog.csdn.net/AmberWu/article/details/79529363`
+
+- 上传到gitpage静态页展示
+  - config index.js中设置`assetsPublicPath: './',`
+  - build目录下utils.js中的ExtractTextPlugin.extract({}),添加下面这个属性就`publicPath: '../../'` 
+  - 仍未解决 不明
