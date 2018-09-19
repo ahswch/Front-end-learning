@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-## Build Setup
+## Build Setup(在Travel文件夹中)
 
 ``` bash
 # install dependencies
