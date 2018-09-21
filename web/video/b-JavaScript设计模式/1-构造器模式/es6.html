@@ -1,0 +1,21 @@
+<script>
+  class Student {
+    constructor(name, gender, score) {
+      this.name = name;
+      this.gender = gender;
+      this.score = score;
+      this.quality = 100;
+    }
+
+    sumScore() {
+      return this.score + this.quality;
+    }
+  }
+
+
+  var whh = new Student('王花花', '男', 89);
+  var lsd = new Student('李栓蛋', '女', 40)
+
+  console.log(whh.name, whh.sumScore());
+  console.log(lsd.name, lsd.sumScore());
+</script>
