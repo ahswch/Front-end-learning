@@ -88,5 +88,5 @@
 
 - 上传到gitpage静态页展示
   - config index.js中设置`assetsPublicPath: './',`
-  - build目录下utils.js中的ExtractTextPlugin.extract({}),添加下面这个属性就`publicPath: '../../'` 
+  - build目录下utils.js中的ExtractTextPlugin.extract({}),添加下面这个属性就`publicPath: '../../'`
   - 仍未解决 不明
