@@ -82,7 +82,7 @@
 > 在服务器端运行：config index.js中设置`assetsPublicPath: '/',`
 > 要想直接打开打包好的html,config index.js中设置`assetsPublicPath: './',`
 > 注意要把json数据放在api文件夹置根目录
-> 暂未成功
+> 成功(把数据源改为github raw地址)
 > `https://blog.csdn.net/a120120yyyy/article/details/78048838`
 > `https://blog.csdn.net/AmberWu/article/details/79529363`
 
