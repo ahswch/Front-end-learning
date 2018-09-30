@@ -109,7 +109,7 @@
   - 新建组件fade
 
    ```javascript
-   //不要使用v-show 
+   //不要使用v-show
    Vue.component('fade', {
       props: ['show'],
       template: `
