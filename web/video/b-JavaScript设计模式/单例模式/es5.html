@@ -1,0 +1,25 @@
+<script>
+  // 多次new只返回一个实例
+
+  function Resource () {
+    if (Resource.instance) {
+      return Resource.instance;
+    } else {
+      this.balance = 100;
+      Resource.instance = this;
+    }
+  }
+
+
+  var r= new Resource();
+  console.log('r:', r);
+  r.balance = 50;
+  console.log('r:', r);
+  
+  var r2 = new Resource();
+  console.log('r2:', r2);
+
+  r.balance = 55;
+
+  console.log('r2:', r2);
+</script>
