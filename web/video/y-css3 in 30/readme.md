@@ -35,3 +35,5 @@
 ## Pacman & Ghost Animation-Day 17
 
 ## Useful Tooltips-Day 18
+
+## Animated Progress Bars-Day 19
