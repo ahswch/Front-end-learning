@@ -1,4 +1,4 @@
-# CSS3 in 30 Days!
+# CSS3 in 30 Days
 
 ## Style Fancy Buttons-Day 1
 
@@ -33,3 +33,5 @@
 ## Modal Window-Day 16
 
 ## Pacman & Ghost Animation-Day 17
+
+## Useful Tooltips-Day 18
