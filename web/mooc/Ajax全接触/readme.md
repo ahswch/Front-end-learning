@@ -99,3 +99,79 @@
   ```
 
 ## Chapter 3 Ajax的简单例子(Ajax + PHP)
+
+### 例子简介
+
+- 功能
+  - 查询员工信息，输入编号
+  - 新建员工信息，姓名 编号 性别 职位
+
+- 页面
+  - 纯html页面。用来实现员工查询和新建
+  = php页面，用来查询员工和新建员工的后台接口
+
+- PHP
+  - 一种创建动态交互性站点的服务器端脚本语言
+  - 能够生成动态页面内容
+  - 能够创建、打开、读取、写入、删除以及关闭服务器上的文件
+  - 能够接收表单数据
+  - 能够发送并取回cookies
+  - 能够添加、删除、修改数据库中的数据
+  - 限制用户访问网站中的某些页面
+  - 对数据进行加密解密
+  - ......
+
+- 运行PHP
+  - XAMMP（此处本人用的phpstudy）
+  - 配置
+
+### 服务器端实现
+
+- 在XAMMP的htdocs中新建ajaxdemo>test.php
+- PHP脚本
+  - 以`<?php`开头，以`?>`结尾
+  - 文件默认扩展名是.php
+  - 语句以分号结尾`;`
+
+### PHP服务端代码测试
+
+- 用fiddler进行测试
+  - get`http://localhost/ajaxdemo/server.php?number=102`
+  - post`http://localhost/ajaxdemo/server.php` 请求主体`name=欧阳锋&number=104&sex=男&job=测试经理`
+    - 需要添加`content-Type:application/x-www-form-urlencoded` 填写正确才行
+
+### 客户端实现
+
+- 新建demo.html
+- 表单及js设置
+- 打开测试`http://localhost/ajaxdemo/demo.html` 浏览器为了安全性考虑，默认禁止本地文件跨域访问。在服务器环境打开
+- response preview乱码 设置server.php
+
+`header("Content-Type: application/json;charset=utf-8");`
+
+- POST请求把参数放在send 且要设置setRequestHeader
+- 逻辑错误 json数据格式
+
+## Chapter 4 JSON格式
+
+### json的基本概念
+
+- Javascript对象表示法(Javascript Object Notation)
+- 是存储和交换文本信息的语法，类似XML。它采用键值对的方式来组织，易于人们阅读和编写，同时也易于机器解析和生成
+- 是独立于语言的，也就是说不管什么语言，都可以解析json，只需要按照json的规则来就行
+- 与XML相比
+  - 长度更短
+  - 读写速度更快
+  - 可以使用Javascript内建的方法直接进行解析，转换成JavaScript对象，非常方便
+- 语法规则
+  - 书写格式：名称/值对（键值都要用引号）
+  - 值可以是：数字、字符串、逻辑值、数组、对象、null
+
+### json解析、格式化和校验工具
+
+- 在js中解析json两种方式
+  - eval 不仅解析了字符串还执行了json字符串中的js方法
+  - JSON.parse 遇到方法 报错 不合法
+  > 在代码中使用eval是和危险的，特别是执行第三方的json数据（可能包含恶意代码）时，尽可能使用JSON.parse()方法解析字符串本身，该方法还可以捕捉JSON中的语法错误
+- 在线json校验工具：<https://jsonlint.com/>
+- 利用约定的json数据某个键值，作错误提示等

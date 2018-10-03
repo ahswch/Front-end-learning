@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <style>
+    * {
+      font-size: 30px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>员工查询</h1>
+  <label for="keyword">请输入员工编号：</label>
+  <input type="text" id="keyword"><br>
+  <button id="search">查询</button>
+  <p id="searchResult"></p>
+
+  <h1>员工新建</h1>
+  <label for="staffName">请输入员工姓名：</label>
+  <input type="text" id="staffName"><br>
+  <label for="staffNumber">请输入员工编号：</label>
+  <input type="text" id="staffNumber"><br>
+  <label for="staffSex">请选择员工性别：</label>
+  <select name="sex" id="staffSex">
+    <option value="男">男</option>
+    <option value="女">女</option>
+  </select><br>
+  <label for="staffJob">请输入员工职位：</label>
+  <input type="text" id="staffJob">
+  <button id="save">保存</button>
+  <p id="createResult"></p>
+
+  <script>
+    document.getElementById("search").onclick = function () {
+      // 发送查询请求并处理
+      var request = new XMLHttpRequest();
+      request.open("GET", "server.php?number=" + document.getElementById("keyword").value);
+      request.send();
+      request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+          if (request.status === 200) {
+            document.getElementById("searchResult").innerHTML = request.responseText;
+          } else {
+            alert("发生错误" + request.status);
+          } 
+        }
+      }
+    }
+    document.getElementById("save").onclick = function () {
+      // 发送查询请求并处理
+      var request = new XMLHttpRequest();
+      request.open("POST", "server.php");
+      var data = "name=" + document.getElementById("staffName").value +
+                  "&number=" + document.getElementById("staffNumber").value +
+                  "&sex=" + document.getElementById("staffSex").value +
+                  "&job=" + document.getElementById("staffJob").value;
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+      request.send(data);
+      request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+          if (request.status === 200) {
+            document.getElementById("createResult").innerHTML = request.responseText;
+          } else {
+            alert("发生错误" + request.status);
+          } 
+        }
+      }
+    }
+  </script>
+</body>
+</html>
