@@ -37,3 +37,5 @@
 ## Useful Tooltips-Day 18
 
 ## Animated Progress Bars-Day 19
+
+## Animated Pyramid-Day 20
