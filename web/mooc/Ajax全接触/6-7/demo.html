@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <style>
+    * {
+      font-size: 30px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>员工查询</h1>
+  <label for="keyword">请输入员工编号：</label>
+  <input type="text" id="keyword"><br>
+  <button id="search">查询</button>
+  <p id="searchResult"></p>
+
+  <h1>员工新建</h1>
+  <label for="staffName">请输入员工姓名：</label>
+  <input type="text" id="staffName"><br>
+  <label for="staffNumber">请输入员工编号：</label>
+  <input type="text" id="staffNumber"><br>
+  <label for="staffSex">请选择员工性别：</label>
+  <select name="sex" id="staffSex">
+    <option value="男">男</option>
+    <option value="女">女</option>
+  </select><br>
+  <label for="staffJob">请输入员工职位：</label>
+  <input type="text" id="staffJob">
+  <button id="save">保存</button>
+  <p id="createResult"></p>
+
+  <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#search").click(function () {
+        $.ajax({
+          type: "GET",
+          url: "serverjson.php?number=" + $("#keyword").val(),
+          dataType: "jsonp",
+          jsonp: "callback",
+          success: function (data) {
+            if (data.success) {
+              $("#searchResult").html(data.msg);
+            } else {
+              $("#searchResult").html("出现错误：" + data.msg);
+            }
+          },
+          error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+          }
+        });
+      });
+      
+      $("#save").click(function () {
+        $.ajax({
+          type: "POST",
+          url: "serverjson.php",
+          dataType: "json",
+          data: {
+            name: $("#staffName").val(),
+            number: $("#staffNumber").val(),
+            sex: $("#staffSex").val(),
+            job: $("#staffJob").val()
+          },
+          success: function (data) {
+            if (data.success) {
+              $("#createResult").html(data.msg);
+            } else {
+              $("#createResult").html("出现错误：" + data.msg);
+            }
+          },
+          error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+          }
+        });
+      });
+    });
+    // document.getElementById("search").onclick = function () {
+    //   // 发送查询请求并处理
+    //   var request = new XMLHttpRequest();
+    //   request.open("GET", "serverjson.php?number=" + document.getElementById("keyword").value);
+    //   request.send();
+    //   request.onreadystatechange = function () {
+    //     if (request.readyState === 4) {
+    //       if (request.status === 200) {
+    //         var data = JSON.parse(request.responseText);
+    //         if (data.success) {
+    //           document.getElementById("searchResult").innerHTML = data.msg;
+    //         } else {
+    //           document.getElementById("searchResult").innerHTML = "出现错误：" + data.msg;
+    //         }
+    //       } else {
+    //         alert("发生错误" + request.status);
+    //       } 
+    //     }
+    //   }
+    // }
+    // document.getElementById("save").onclick = function () {
+    //   // 发送查询请求并处理
+    //   var request = new XMLHttpRequest();
+    //   request.open("POST", "serverjson.php");
+    //   var data = "name=" + document.getElementById("staffName").value +
+    //               "&number=" + document.getElementById("staffNumber").value +
+    //               "&sex=" + document.getElementById("staffSex").value +
+    //               "&job=" + document.getElementById("staffJob").value;
+    //   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    //   request.send(data);
+    //   request.onreadystatechange = function () {
+    //     if (request.readyState === 4) {
+    //       if (request.status === 200) {
+    //         var data = JSON.parse(request.responseText);
+    //         if (data.success) {
+    //           document.getElementById("createResult").innerHTML = data.msg;
+    //         } else {
+    //           document.getElementById("createResult").innerHTML = "出现错误：" + data.msg;
+    //         }
+    //       } else {
+    //         alert("发生错误" + request.status);
+    //       } 
+    //     }
+    //   }
+    // }
+  </script>
+</body>
+</html>

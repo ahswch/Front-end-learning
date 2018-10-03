@@ -175,3 +175,52 @@
   > 在代码中使用eval是和危险的，特别是执行第三方的json数据（可能包含恶意代码）时，尽可能使用JSON.parse()方法解析字符串本身，该方法还可以捕捉JSON中的语法错误
 - 在线json校验工具：<https://jsonlint.com/>
 - 利用约定的json数据某个键值，作错误提示等
+
+## Chapter 5 jQuery中的AJAX
+
+### 用jQuery实现Ajax
+
+- jQuery.ajax([settings])
+  - type:类型，"POST"或"GET"，默认为"GET"
+  - url:发送请求的地址
+  - data:是一个对象，连同请求发送到服务器的数据
+  - dataType:预期服务器返回的数据类型。如果不指定，jQuery将自动根据HTTP包MIME信息来智能判断，一般我们采用json格式，可以设置为"json"
+  - success:是一个方法，请求成功后的回调函数。传入返回后的数据，以及包含成功代码的字符串
+  - error:是一个方法，请求失败时调用此函数。传入XMLHttpRequest对象
+- 使用jQuery修改代码
+
+## Chapter 6 跨域
+
+- 一个域名地址的组成
+  ![跨域](./img/3.png)
+
+- 当协议、子域名、主域名、端口号中任意一个不相同时，都算作不同域
+- 不同域之间互相请求资源，就算作"跨域"
+- Javascript出于安全方面的考虑，不允许跨域调用其他页面的对象。什么是跨域呢？简单地理解就是因为Javascript同源策略的限制，a.com域名下的js无法操作b.com或是c.com域名下的对象
+- 跨域的处理方式
+  - 代理
+  - JSONP
+  - XHR2
+
+### 代理(后端、后台)
+
+### JSONP
+
+- JSONP可用于解决主流浏览器的跨域数据访问的问题
+  - 在之前的jQuery中修改dataType为"JSONP" 并在下一行添加`jsonp: "callback(othernaem)"`
+  - 在后端php文件get请求函数中设置`$jsonp = $_GET["callback"]` 并把返回值加上`$jsonp.'({})'`
+  - `http://127.0.0.1/ajaxdemo/demo.html`可以正常访问
+- 只支持GET请求
+
+### XHR2
+
+- html5提供的XMLHttpRequest Level2已经实现了跨域访问以及其他的一些新功能
+- IE10以下的版本都不支持
+- 在服务器端做一些小小的改造即可：
+
+```php
+header('Access-Control-Allow-Origin:*');
+header('Access-Control-Allow-Methods:POST,GET');
+```
+
+## 总结
