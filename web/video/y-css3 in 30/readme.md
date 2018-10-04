@@ -39,3 +39,5 @@
 ## Animated Progress Bars-Day 19
 
 ## Animated Pyramid-Day 20
+
+## Spinners-Day 21
