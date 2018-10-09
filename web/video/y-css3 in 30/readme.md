@@ -41,3 +41,17 @@
 ## Animated Pyramid-Day 20
 
 ## Spinners-Day 21
+
+## Flexbox Layouts-Day 22
+
+## Accordion-Day 23
+
+## @supports Rule-Day 24
+
+## Sliding Panels-Day 25
+
+## Layer Effect-Day 26
+
+## CSS Only Dropdown Menu-Day 27
+
+## Optimizing CSS-Day 28
