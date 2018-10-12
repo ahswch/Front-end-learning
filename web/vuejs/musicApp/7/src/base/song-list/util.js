@@ -1,11 +1,8 @@
-// 获得随机数
-function getRandomInt (min, max) {
+function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-// 随机播放：打乱数组
-export function shuffle (arr) {
-  // 声明副本，不修改原数组 避免随机播放时选择songlist歌曲播放非点击歌曲
+export function shuffle(arr) {
   let _arr = arr.slice()
   for (let i = 0; i < _arr.length; i++) {
     let j = getRandomInt(0, i)
@@ -16,7 +13,7 @@ export function shuffle (arr) {
   return _arr
 }
 
-export function debounce (func, delay) {
+export function debounce(func, delay) {
   let timer
 
   return function (...args) {
