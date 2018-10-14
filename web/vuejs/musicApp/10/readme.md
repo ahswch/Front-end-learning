@@ -1,0 +1,34 @@
+# Chapter 10 搜索页面开发
+
+- search-box组件（base）
+- 热词获取
+  - api下search
+  - 点击search把热词放到搜索框（addQuery）此方法在common/js/mixin下
+- 搜索
+  - 新建suggest组件
+  - 数据接口 api/search
+  - 上拉刷新扩展scroll组件 loading
+  - 每次search重置位置到顶部
+  - 点击歌手-歌手详情页
+    - 二级路由配置
+  - 点击歌曲添加到播放列表
+    - vuex actions里设置insertSong
+- 优化
+  - 无结果情况
+    - no-result组件
+  - 搜索节流
+    - search-box组件派发事件延迟（在common/js/util中设置debounce）
+  - 移动端滚动搜索结果收起键盘
+    - scroll组件扩展
+- 搜索历史
+  - vuex设置历史数据
+  - suggest的派发点击事件，search实现保存历史
+    - common/js下新建cache
+    - 安装good-storage
+    - vuex与响应组件交互
+  - search-list组件
+  - 删除操作
+    - 删除全部弹窗组件confirm
+- 优化
+  - scroll使用计算属性shortcut及watch至refresh
+  - mini播放高度适应
