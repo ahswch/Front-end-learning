@@ -4,7 +4,7 @@
 
 ## 预览地址
 
-<https://afteryo.github.io/ele/#/goods>
+<https://afteryo.github.io/ele/#/>
 
 - 项目文件在sell文件夹中，可下载调试
 
