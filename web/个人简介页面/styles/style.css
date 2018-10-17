@@ -59,7 +59,7 @@ nav{
   color: #545454;
 }
 .profile {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -74,13 +74,14 @@ a:hover {
   text-decoration: none;
 }
 .expr{
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 20px 20px;
   background-color: #f7f7f7;
 }
 .edu,.abil,.code{
+  min-width: 284px;
   display: inline-block;
   vertical-align: top;
   font-size: 15px;
@@ -88,52 +89,12 @@ a:hover {
 .edu p,.abil p,.code p{
   line-height: 2em;
 }
-.edu{
-  width: 40%;
-}
-.abil{
-  width: 40%;
-}
-.code{
-  width: 18%;
-}
 .abil span {
   position:relative;
 }
-#html:after{
-  content:'★★★★★';
-  position:absolute;
-  top:-5px;
-  left:0;
-  width:3.5em;
-  overflow: hidden;
-}
-#css:after{
-  content:'★★★★★';
-  position:absolute;
-  top:-5px;
-  left:0;
-  width:2.5em;
-  overflow: hidden;
-}
-#js:after{
-  content:'★★★★★';
-  position:absolute;
-  top:-5px;
-  left:0;
-  width:2.5em;
-  overflow: hidden;
-}
-#vue:after{
-  content:'★★★★★';
-  position:absolute;
-  top:-5px;
-  left:0;
-  width:0.5em;
-  overflow: hidden;
-}
+
 .port{
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 20px 20px;
@@ -142,7 +103,7 @@ a:hover {
 .work {
   display: inline-block;
   vertical-align: top;
-  width: 45%;
+  width: 350px;
   background-color: #fff;
   margin: 15px 15px;
   padding: 15px 15px;
@@ -196,7 +157,7 @@ a:hover {
   margin-bottom: 40px;
 }
 .contact{
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 20px 20px;
@@ -210,8 +171,11 @@ a:hover {
   vertical-align: top;
   padding: 15px 15px;
   margin: 15px 15px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-  width: 45%;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); */
+  border-radius: 3px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 3px 3px 0px #bababa;
+  width: 370px;
 }
 .bySocial i{
   font-size: 34px;
@@ -242,4 +206,14 @@ footer {
 }
 footer i{
   color: blueviolet;
+}
+.byEmail form input[type="submit"] {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 15px;
+}
+@media screen and (max-width : 768px) {
+  .work {
+    display: block;
+  }
 }
