@@ -13,5 +13,6 @@
 - canvas使用
 - 闭包原理及应用
 - vue生命周期
+- for循环console 延时console问题 同步异步 作用域 
 
 > 这两天会更新下搜集的答案
