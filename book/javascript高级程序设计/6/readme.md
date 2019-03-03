@@ -167,32 +167,32 @@ Object 构造函数或对象字面量都可以用来创建单个对象,缺点：
 
 ECMAScript中的构造函数可用来创建特定类型的对象。像 Object 和 Array 这样的原生构造函数，在运行时会自动出现在执行环境中。此外，也可以创建自定义的构造函数，从而定义自定义对象类型的属性和方法。将工厂模式例子重写如下：
 
- ```javascript
- function Person(name, age, job){
-   this.name = name;
-   this.age = age;
-   this.job = job;
-   this.sayName = function(){
-     alert(this.name);
-   };
- }
+```javascript
+function Person(name, age, job){
+  this.name = name;
+  this.age = age;
+  this.job = job;
+  this.sayName = function(){
+    alert(this.name);
+  };
+}
 
- var person1 = new Person("Nicholas", 29, "Software Engineer");
- var person2 = new Person("Greg", 27, "Doctor");
- // person1 和 person2 分别保存着 Person 的一个不同的实例，两个对象都有一个 constructor（构造函数）属性，该属性指向 Person
- alert(person1.constructor == Person); //true
- alert(person2.constructor == Person); //true
+var person1 = new Person("Nicholas", 29, "Software Engineer");
+var person2 = new Person("Greg", 27, "Doctor");
+// person1 和 person2 分别保存着 Person 的一个不同的实例，两个对象都有一个 constructor（构造函数）属性，该属性指向 Person
+alert(person1.constructor == Person); //true
+alert(person2.constructor == Person); //true
 
- // 例子中创建的所有对象既是 Object 的实例，同时也是 Person的实例
- alert(person1 instanceof Object); //true
- alert(person1 instanceof Person); //true
- ```
+// 例子中创建的所有对象既是 Object 的实例，同时也是 Person的实例
+alert(person1 instanceof Object); //true
+alert(person1 instanceof Person); //true
+```
 
 与之前例子区别：
 
 - 没有显式地创建对象
 - 直接将属性和方法赋给了 this 对象
-- 没有 return 语句 
+- 没有 return 语句
 
 > 一般，构造函数始终都应该以一个大写字母开头，而非构造函数则应该以一个小写字母开头
 
@@ -207,30 +207,30 @@ ECMAScript中的构造函数可用来创建特定类型的对象。像 Object �
 - 任何函数，通过 new 操作符来调用，就可以作为构造函数
 - 任何函数，不通过 new 操作符来调用，跟普通函数一样
 
- ```javascript
- // 当作构造函数使用
- var person = new Person("Nicholas", 29, "Software Engineer");
- person.sayName(); //"Nicholas"
+```javascript
+// 当作构造函数使用
+var person = new Person("Nicholas", 29, "Software Engineer");
+person.sayName(); //"Nicholas"
 
- // 作为普通函数调用
- Person("Greg", 27, "Doctor"); // 添加到 window
- window.sayName(); //"Greg"
+// 作为普通函数调用
+Person("Greg", 27, "Doctor"); // 添加到 window
+window.sayName(); //"Greg"
 
- // 在另一个对象的作用域中调用
- var o = new Object();
- Person.call(o, "Kristen", 25, "Nurse");
- o.sayName(); //"Kristen"
- ```
+// 在另一个对象的作用域中调用
+var o = new Object();
+Person.call(o, "Kristen", 25, "Nurse");
+o.sayName(); //"Kristen"
+```
 
 #### 构造函数的问题
 
 缺点：
 
-- 每个方法都要在每个实例上重新创建一遍 
+- 每个方法都要在每个实例上重新创建一遍
 
-   ```javascript
-   alert(person1.sayName == person2.sayName); //false
-   ```
+  ```javascript
+  alert(person1.sayName == person2.sayName); //false
+  ```
 
 - 通过把函数定义转移到构造函数外部来解决这个问题。
 
