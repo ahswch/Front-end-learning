@@ -1,0 +1,15 @@
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\bin\Debug\Ch08Ex01.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\bin\Debug\Ch08Ex01.exe
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\bin\Debug\Ch08Ex01.pdb
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\MainWindow.g.cs
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\App.g.cs
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01_MarkupCompile.cache
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01_MarkupCompile.lref
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\MainWindow.baml
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.g.resources
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.Properties.Resources.resources
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.csproj.GenerateResource.cache
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.exe
+D:\work\c#\2019-3\C#入门经典\chapter8\Ch08Ex01\Ch08Ex01\obj\Debug\Ch08Ex01.pdb

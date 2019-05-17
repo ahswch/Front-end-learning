@@ -1,0 +1,6 @@
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\obj\Debug\practice6.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\bin\Debug\practice6.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\bin\Debug\practice6.exe
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\bin\Debug\practice6.pdb
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\obj\Debug\practice6.exe
+D:\work\c#\2019-3\C#入门经典\chapter5\practice6\practice6\obj\Debug\practice6.pdb

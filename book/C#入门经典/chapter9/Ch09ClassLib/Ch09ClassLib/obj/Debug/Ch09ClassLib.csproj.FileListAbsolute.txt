@@ -1,0 +1,6 @@
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\bin\Debug\Ch09ClassLib.dll
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\bin\Debug\Ch09ClassLib.pdb
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\obj\Debug\Ch09ClassLib.csprojAssemblyReference.cache
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\obj\Debug\Ch09ClassLib.csproj.CoreCompileInputs.cache
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\obj\Debug\Ch09ClassLib.dll
+C:\Users\WangYT-PC\source\repos\Ch09ClassLib\Ch09ClassLib\obj\Debug\Ch09ClassLib.pdb

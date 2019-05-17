@@ -1,0 +1,10 @@
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\bin\Debug\Ch10CardClient.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\bin\Debug\Ch10CardClient.exe
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\bin\Debug\Ch10CardClient.pdb
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\bin\Debug\Ch10CardLib.dll
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\bin\Debug\Ch10CardLib.pdb
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\obj\Debug\Ch10CardClient.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\obj\Debug\Ch10CardClient.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\obj\Debug\Ch10CardClient.csproj.CopyComplete
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\obj\Debug\Ch10CardClient.exe
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardClient\obj\Debug\Ch10CardClient.pdb

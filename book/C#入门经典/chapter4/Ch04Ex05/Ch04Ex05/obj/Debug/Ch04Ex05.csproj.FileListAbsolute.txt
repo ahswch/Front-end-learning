@@ -1,0 +1,7 @@
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\bin\Debug\Ch04Ex05.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\bin\Debug\Ch04Ex05.exe
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\bin\Debug\Ch04Ex05.pdb
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\obj\Debug\Ch04Ex05.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\obj\Debug\Ch04Ex05.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\obj\Debug\Ch04Ex05.exe
+D:\work\c#\2019-3\C#入门经典\chapter4\Ch04Ex05\Ch04Ex05\obj\Debug\Ch04Ex05.pdb

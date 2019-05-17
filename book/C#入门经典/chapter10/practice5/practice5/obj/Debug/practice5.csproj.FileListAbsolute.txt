@@ -1,0 +1,10 @@
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\bin\Debug\practice5.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\bin\Debug\practice5.exe
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\bin\Debug\practice5.pdb
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\bin\Debug\Ch10CardLib.dll
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\bin\Debug\Ch10CardLib.pdb
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\obj\Debug\practice5.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\obj\Debug\practice5.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\obj\Debug\practice5.csproj.CopyComplete
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\obj\Debug\practice5.exe
+D:\work\c#\2019-3\C#入门经典\chapter10\practice5\practice5\obj\Debug\practice5.pdb

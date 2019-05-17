@@ -1,0 +1,7 @@
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\bin\Debug\Ch06Ex05.exe.config
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\bin\Debug\Ch06Ex05.exe
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\bin\Debug\Ch06Ex05.pdb
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\obj\Debug\Ch06Ex05.csprojAssemblyReference.cache
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\obj\Debug\Ch06Ex05.csproj.CoreCompileInputs.cache
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\obj\Debug\Ch06Ex05.exe
+C:\Users\WangYT-PC\source\repos\Ch06Ex05\Ch06Ex05\obj\Debug\Ch06Ex05.pdb

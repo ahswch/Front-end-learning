@@ -1,0 +1,7 @@
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\bin\Debug\Ch06Ex02.exe.config
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\bin\Debug\Ch06Ex02.exe
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\bin\Debug\Ch06Ex02.pdb
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\obj\Debug\Ch06Ex02.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\obj\Debug\Ch06Ex02.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\obj\Debug\Ch06Ex02.exe
+D:\work\c#\2019-3\C#入门经典\chapter6\Ch06Ex02\Ch06Ex02\obj\Debug\Ch06Ex02.pdb
