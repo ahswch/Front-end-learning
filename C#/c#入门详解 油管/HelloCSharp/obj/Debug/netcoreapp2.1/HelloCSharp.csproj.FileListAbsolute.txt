@@ -1,0 +1,11 @@
+D:\c#\c#r入门详解 油管\HelloCSharp\bin\Debug\netcoreapp2.1\HelloCSharp.deps.json
+D:\c#\c#r入门详解 油管\HelloCSharp\bin\Debug\netcoreapp2.1\HelloCSharp.runtimeconfig.json
+D:\c#\c#r入门详解 油管\HelloCSharp\bin\Debug\netcoreapp2.1\HelloCSharp.runtimeconfig.dev.json
+D:\c#\c#r入门详解 油管\HelloCSharp\bin\Debug\netcoreapp2.1\HelloCSharp.dll
+D:\c#\c#r入门详解 油管\HelloCSharp\bin\Debug\netcoreapp2.1\HelloCSharp.pdb
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.csprojAssemblyReference.cache
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.csproj.CoreCompileInputs.cache
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.AssemblyInfoInputs.cache
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.AssemblyInfo.cs
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.dll
+D:\c#\c#r入门详解 油管\HelloCSharp\obj\Debug\netcoreapp2.1\HelloCSharp.pdb

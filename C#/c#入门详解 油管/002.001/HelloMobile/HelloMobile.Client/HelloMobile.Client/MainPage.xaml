@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloMobile.Client"
+             x:Class="HelloMobile.Client.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Editor x:Name="Tb1" Grid.Row="0"></Editor>
+        <Editor x:Name="Tb2" Grid.Row="1"></Editor>
+        <Editor x:Name="Tb3" Grid.Row="2"></Editor>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Btn1" Grid.Column="0" Text="Add" Clicked="DoAdd"></Button>
+            <Button x:Name="Btn2" Grid.Column="1" Text="Sub"></Button>
+            <Button x:Name="Btn3" Grid.Column="2" Text="Mul"></Button>
+            <Button x:Name="Btn4" Grid.Column="3" Text="Div"></Button>
+        </Grid>
+    </Grid>
+
+</ContentPage>
