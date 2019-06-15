@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AdventureWorksDW2012Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DimAccount">
+          <Key>
+            <PropertyRef Name="AccountKey" />
+          </Key>
+          <Property Name="AccountKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentAccountKey" Type="int" />
+          <Property Name="AccountCodeAlternateKey" Type="int" />
+          <Property Name="ParentAccountCodeAlternateKey" Type="int" />
+          <Property Name="AccountDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomMembers" Type="nvarchar" MaxLength="300" />
+          <Property Name="ValueType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomMemberOptions" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="DimProduct">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductAlternateKey" Type="nvarchar" MaxLength="25" />
+          <Property Name="ProductSubcategoryKey" Type="int" />
+          <Property Name="WeightUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="SizeUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="EnglishProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SpanishProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FrenchProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StandardCost" Type="money" />
+          <Property Name="FinishedGoodsFlag" Type="bit" Nullable="false" />
+          <Property Name="Color" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="SafetyStockLevel" Type="smallint" />
+          <Property Name="ReorderPoint" Type="smallint" />
+          <Property Name="ListPrice" Type="money" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="SizeRange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="DaysToManufacture" Type="int" />
+          <Property Name="ProductLine" Type="nchar" MaxLength="2" />
+          <Property Name="DealerPrice" Type="money" />
+          <Property Name="Class" Type="nchar" MaxLength="2" />
+          <Property Name="Style" Type="nchar" MaxLength="2" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LargePhoto" Type="varbinary(max)" />
+          <Property Name="EnglishDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="FrenchDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ChineseDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ArabicDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="HebrewDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ThaiDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="GermanDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="JapaneseDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="TurkishDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <Association Name="FK_DimAccount_DimAccount">
+          <End Role="DimAccount" Type="Self.DimAccount" Multiplicity="0..1" />
+          <End Role="DimAccount1" Type="Self.DimAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimAccount">
+              <PropertyRef Name="AccountKey" />
+            </Principal>
+            <Dependent Role="DimAccount1">
+              <PropertyRef Name="ParentAccountKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AdventureWorksDW2012ModelStoreContainer">
+          <EntitySet Name="DimAccount" EntityType="Self.DimAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DimProduct" EntityType="Self.DimProduct" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DimAccount_DimAccount" Association="Self.FK_DimAccount_DimAccount">
+            <End Role="DimAccount" EntitySet="DimAccount" />
+            <End Role="DimAccount1" EntitySet="DimAccount" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureWorksDW2012Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DimAccount">
+          <Key>
+            <PropertyRef Name="AccountKey" />
+          </Key>
+          <Property Name="AccountKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentAccountKey" Type="Int32" />
+          <Property Name="AccountCodeAlternateKey" Type="Int32" />
+          <Property Name="ParentAccountCodeAlternateKey" Type="Int32" />
+          <Property Name="AccountDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AccountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomMembers" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ValueType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomMemberOptions" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DimAccount1" Relationship="Self.FK_DimAccount_DimAccount" FromRole="DimAccount" ToRole="DimAccount1" />
+          <NavigationProperty Name="DimAccount2" Relationship="Self.FK_DimAccount_DimAccount" FromRole="DimAccount1" ToRole="DimAccount" />
+        </EntityType>
+        <EntityType Name="DimProduct">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductAlternateKey" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="ProductSubcategoryKey" Type="Int32" />
+          <Property Name="WeightUnitMeasureCode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="SizeUnitMeasureCode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="EnglishProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SpanishProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FrenchProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StandardCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FinishedGoodsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SafetyStockLevel" Type="Int16" />
+          <Property Name="ReorderPoint" Type="Int16" />
+          <Property Name="ListPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SizeRange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="DaysToManufacture" Type="Int32" />
+          <Property Name="ProductLine" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="DealerPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Class" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="Style" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="ModelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LargePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EnglishDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="FrenchDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ChineseDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ArabicDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="HebrewDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ThaiDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="GermanDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="JapaneseDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="TurkishDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_DimAccount_DimAccount">
+          <End Role="DimAccount" Type="Self.DimAccount" Multiplicity="0..1" />
+          <End Role="DimAccount1" Type="Self.DimAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimAccount">
+              <PropertyRef Name="AccountKey" />
+            </Principal>
+            <Dependent Role="DimAccount1">
+              <PropertyRef Name="ParentAccountKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AdventureWorksDW2012Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DimAccounts" EntityType="Self.DimAccount" />
+          <EntitySet Name="DimProducts" EntityType="Self.DimProduct" />
+          <AssociationSet Name="FK_DimAccount_DimAccount" Association="Self.FK_DimAccount_DimAccount">
+            <End Role="DimAccount" EntitySet="DimAccounts" />
+            <End Role="DimAccount1" EntitySet="DimAccounts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorksDW2012ModelStoreContainer" CdmEntityContainer="AdventureWorksDW2012Entities">
+          <EntitySetMapping Name="DimAccounts">
+            <EntityTypeMapping TypeName="AdventureWorksDW2012Model.DimAccount">
+              <MappingFragment StoreEntitySet="DimAccount">
+                <ScalarProperty Name="AccountKey" ColumnName="AccountKey" />
+                <ScalarProperty Name="ParentAccountKey" ColumnName="ParentAccountKey" />
+                <ScalarProperty Name="AccountCodeAlternateKey" ColumnName="AccountCodeAlternateKey" />
+                <ScalarProperty Name="ParentAccountCodeAlternateKey" ColumnName="ParentAccountCodeAlternateKey" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="CustomMembers" ColumnName="CustomMembers" />
+                <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+                <ScalarProperty Name="CustomMemberOptions" ColumnName="CustomMemberOptions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DimProducts">
+            <EntityTypeMapping TypeName="AdventureWorksDW2012Model.DimProduct">
+              <MappingFragment StoreEntitySet="DimProduct">
+                <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+                <ScalarProperty Name="ProductAlternateKey" ColumnName="ProductAlternateKey" />
+                <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+                <ScalarProperty Name="WeightUnitMeasureCode" ColumnName="WeightUnitMeasureCode" />
+                <ScalarProperty Name="SizeUnitMeasureCode" ColumnName="SizeUnitMeasureCode" />
+                <ScalarProperty Name="EnglishProductName" ColumnName="EnglishProductName" />
+                <ScalarProperty Name="SpanishProductName" ColumnName="SpanishProductName" />
+                <ScalarProperty Name="FrenchProductName" ColumnName="FrenchProductName" />
+                <ScalarProperty Name="StandardCost" ColumnName="StandardCost" />
+                <ScalarProperty Name="FinishedGoodsFlag" ColumnName="FinishedGoodsFlag" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="SafetyStockLevel" ColumnName="SafetyStockLevel" />
+                <ScalarProperty Name="ReorderPoint" ColumnName="ReorderPoint" />
+                <ScalarProperty Name="ListPrice" ColumnName="ListPrice" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="SizeRange" ColumnName="SizeRange" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="DaysToManufacture" ColumnName="DaysToManufacture" />
+                <ScalarProperty Name="ProductLine" ColumnName="ProductLine" />
+                <ScalarProperty Name="DealerPrice" ColumnName="DealerPrice" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="LargePhoto" ColumnName="LargePhoto" />
+                <ScalarProperty Name="EnglishDescription" ColumnName="EnglishDescription" />
+                <ScalarProperty Name="FrenchDescription" ColumnName="FrenchDescription" />
+                <ScalarProperty Name="ChineseDescription" ColumnName="ChineseDescription" />
+                <ScalarProperty Name="ArabicDescription" ColumnName="ArabicDescription" />
+                <ScalarProperty Name="HebrewDescription" ColumnName="HebrewDescription" />
+                <ScalarProperty Name="ThaiDescription" ColumnName="ThaiDescription" />
+                <ScalarProperty Name="GermanDescription" ColumnName="GermanDescription" />
+                <ScalarProperty Name="JapaneseDescription" ColumnName="JapaneseDescription" />
+                <ScalarProperty Name="TurkishDescription" ColumnName="TurkishDescription" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
