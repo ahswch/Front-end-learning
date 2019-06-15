@@ -1,0 +1,10 @@
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\bin\Debug\Ch09Ex02.exe.config
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\bin\Debug\Ch09Ex02.exe
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\bin\Debug\Ch09Ex02.pdb
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\bin\Debug\Ch09ClassLib.dll
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\bin\Debug\Ch09ClassLib.pdb
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\obj\Debug\Ch09Ex02.csprojAssemblyReference.cache
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\obj\Debug\Ch09Ex02.csproj.CoreCompileInputs.cache
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\obj\Debug\Ch09Ex02.csproj.CopyComplete
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\obj\Debug\Ch09Ex02.exe
+C:\Users\WangYT-PC\source\repos\Ch09Ex02\Ch09Ex02\obj\Debug\Ch09Ex02.pdb

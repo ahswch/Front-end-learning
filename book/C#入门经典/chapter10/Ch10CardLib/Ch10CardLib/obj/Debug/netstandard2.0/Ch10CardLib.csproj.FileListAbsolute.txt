@@ -1,0 +1,9 @@
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\bin\Debug\netstandard2.0\Ch10CardLib.deps.json
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\bin\Debug\netstandard2.0\Ch10CardLib.dll
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\bin\Debug\netstandard2.0\Ch10CardLib.pdb
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.csprojAssemblyReference.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.csproj.CoreCompileInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.AssemblyInfoInputs.cache
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.AssemblyInfo.cs
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.dll
+D:\work\c#\2019-3\C#入门经典\chapter10\Ch10CardLib\Ch10CardLib\obj\Debug\netstandard2.0\Ch10CardLib.pdb
