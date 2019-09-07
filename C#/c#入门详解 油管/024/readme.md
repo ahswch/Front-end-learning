@@ -15,8 +15,8 @@
 - 类修饰符
   - new
   - public
-  - protected
-  - internal(项目内访问  默认)
+  - protected(子类可访问)
+  - internal(项目内访问/程序集访问  默认)
   - private (一般不用 用在成员类)
   - abstract
   - sealed

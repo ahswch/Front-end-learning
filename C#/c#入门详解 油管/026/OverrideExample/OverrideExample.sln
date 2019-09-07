@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideExample", "OverrideExample\OverrideExample.csproj", "{F481D7AD-D42C-4BF6-A19D-D87579599CDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F481D7AD-D42C-4BF6-A19D-D87579599CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F481D7AD-D42C-4BF6-A19D-D87579599CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F481D7AD-D42C-4BF6-A19D-D87579599CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F481D7AD-D42C-4BF6-A19D-D87579599CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
