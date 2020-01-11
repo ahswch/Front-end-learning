@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyStroller", "BabyStroller\BabyStroller.csproj", "{FD12C600-3EC9-4964-90E1-189AF69FFF8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyStroller.SDK", "BabyStroller.SDK\BabyStroller.SDK.csproj", "{205588F3-C2BA-412B-AFC3-C1FA30A31F6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD12C600-3EC9-4964-90E1-189AF69FFF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD12C600-3EC9-4964-90E1-189AF69FFF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD12C600-3EC9-4964-90E1-189AF69FFF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD12C600-3EC9-4964-90E1-189AF69FFF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205588F3-C2BA-412B-AFC3-C1FA30A31F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205588F3-C2BA-412B-AFC3-C1FA30A31F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205588F3-C2BA-412B-AFC3-C1FA30A31F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205588F3-C2BA-412B-AFC3-C1FA30A31F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

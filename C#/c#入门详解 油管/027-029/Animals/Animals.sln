@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals.Lib", "Animals.Lib\Animals.Lib.csproj", "{06B66E34-B2D6-4494-8D7B-685E394B1C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals.Lib2", "Animals.Lib2\Animals.Lib2.csproj", "{3EFD66CE-444F-4741-BDEE-C1618D0E6827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B66E34-B2D6-4494-8D7B-685E394B1C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B66E34-B2D6-4494-8D7B-685E394B1C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B66E34-B2D6-4494-8D7B-685E394B1C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B66E34-B2D6-4494-8D7B-685E394B1C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFD66CE-444F-4741-BDEE-C1618D0E6827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFD66CE-444F-4741-BDEE-C1618D0E6827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFD66CE-444F-4741-BDEE-C1618D0E6827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFD66CE-444F-4741-BDEE-C1618D0E6827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExample", "InterfaceExample\InterfaceExample.csproj", "{BFD46D2E-C53E-4627-84C8-0ADE124F5D7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD46D2E-C53E-4627-84C8-0ADE124F5D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD46D2E-C53E-4627-84C8-0ADE124F5D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD46D2E-C53E-4627-84C8-0ADE124F5D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD46D2E-C53E-4627-84C8-0ADE124F5D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
